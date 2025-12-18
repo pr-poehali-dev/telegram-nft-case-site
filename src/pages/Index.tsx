@@ -125,13 +125,13 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-accent/20 text-accent border-accent/30">
-              NFT Коллекция
+              Наши достижения
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Эксклюзивные NFT Подарки
+              Кейсы
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Уникальные цифровые активы, которые можно дарить друзьям через Telegram
+              Проекты, которые изменили индустрию NFT и Web3
             </p>
           </div>
 
