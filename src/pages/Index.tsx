@@ -3,6 +3,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const Index = () => {
   const [walletConnected, setWalletConnected] = useState(false);
@@ -164,10 +172,35 @@ const Index = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full gap-2" variant="secondary">
-                    <Icon name="Gift" size={18} />
-                    Подарить в Telegram
-                  </Button>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button className="w-full gap-2" variant="secondary">
+                        <Icon name="Gift" size={18} />
+                        Подарить в Telegram
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="w-56 glassmorphism">
+                      <DropdownMenuLabel>Выберите способ отправки</DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem className="cursor-pointer">
+                        <Icon name="Send" size={16} className="mr-2" />
+                        Отправить контакту
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="cursor-pointer">
+                        <Icon name="Users" size={16} className="mr-2" />
+                        Отправить в группу
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="cursor-pointer">
+                        <Icon name="Link" size={16} className="mr-2" />
+                        Создать ссылку
+                      </DropdownMenuItem>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem className="cursor-pointer">
+                        <Icon name="QrCode" size={16} className="mr-2" />
+                        QR-код для передачи
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </CardContent>
               </Card>
             ))}
